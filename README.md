@@ -43,14 +43,32 @@ Study notes for JS module tools.
 > - **[你有聽過 CommonJS 嗎？ | JS 生態系及週邊工具整理](https://ithelp.ithome.com.tw/articles/10191478)**
 > - **[AMD 與 CommonJS 的發展 | JS 生態系及週邊工具整理](https://ithelp.ithome.com.tw/articles/10191574)**
 
-## D. NPM | TK
+## D. NPM & Yarn
+1. 創建 project：
+    - `npm init`：輸入專案資訊，生成 `package.json`。
+    - `npm init -y`：跳過預設專案資訊，生成空白的 `package.json`。
+1. 安裝函式庫：
+    1. 網路搜尋發布在 npm 上的函式庫。
+    1. `npm install [library_name]`
+    1. 安裝完成後：
+        1. 生成 `node_modules` 資料夾，所有安裝的函式庫與關連套件都放在這裡。
+        1. 生成 / 更新 `package-lock.json`，記錄詳細的相依套件版本。
+        1. 更新 `package.json` 內的函式庫相依性。未來直接 `npm install` 即可依照該相依性記錄來自動安裝函式庫。
+1. Yarn：Facebook 內部為了解決 npm 問題而開發出的套件管理工具，後來開源出來。
+    - 仍使用 npm 資料庫。
+    - 支援平行下載，下載套件時速度較快。
+    - 使用自己的 lock 檔 `yarn.lock`。格式比較易讀，但功能類似。
+    - UI 比較友善、漂亮。
 
 > **Reference**
-> - [npm init 與 npm install | JS 生態系及週邊工具整理](https://ithelp.ithome.com.tw/articles/10191682)
-> - [NPM Install 到底做了些什麼？node_modules 檔案結構 + 特性入門 | JS 生態系及週邊工具整理](https://ithelp.ithome.com.tw/articles/10191783)
+> - **[npm init 與 npm install | JS 生態系及週邊工具整理](https://ithelp.ithome.com.tw/articles/10191682)**
+> - [NPM Install 到底做了些什麼？| JS 生態系及週邊工具整理](https://ithelp.ithome.com.tw/articles/10191783)
+> - **[package-lock.json 有什麼用？| JS 生態系及週邊工具整理](https://ithelp.ithome.com.tw/articles/10191888)**
+> - [Vue-Cli 所創建的 package.json + Webpack 設定大解析 | JS 生態系及週邊工具整理](https://ithelp.ithome.com.tw/articles/10192120)
 
 ## E. Webpack | TK
 1. Webpack 出現：實作瀏覽器版本 CommonJS 模組的同時，也支援 npm 上的套件。自此 JS 瀏覽器端也開始走向與 Server 端 Node.js 相同的模組管理方式：CommonJS / NPM。
 
 > **Reference**
-> - **[AMD 與 CommonJS 的發展 | JS 生態系及週邊工具整理](https://ithelp.ithome.com.tw/articles/10191574)**
+> - [AMD 與 CommonJS 的發展 | JS 生態系及週邊工具整理](https://ithelp.ithome.com.tw/articles/10191574)
+> - **[Webpack 零設定，入門教學 | JS 生態系及週邊工具整理](https://ithelp.ithome.com.tw/articles/10192578)**
