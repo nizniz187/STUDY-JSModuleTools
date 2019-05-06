@@ -1,6 +1,17 @@
 # STUDY-JS-Module-Tools
 Study notes for JS module tools.
 
+---
+
+## TOC
+#### A. [Early Script Loader](https://github.com/nizniz187/STUDY-JS-Module-Tools#a-early-script-loader)
+#### B. [ES6 Modules API](https://github.com/nizniz187/STUDY-JS-Module-Tools#b-es6-modules-api)
+#### C. [CommonJS](https://github.com/nizniz187/STUDY-JS-Module-Tools#c-commonjs)
+#### D. [NPM & Yarn](https://github.com/nizniz187/STUDY-JS-Module-Tools#d-npm--yarn)
+#### E. [Webpack](https://github.com/nizniz187/STUDY-JS-Module-Tools#e-webpack)
+
+---
+
 ## A. Early Script Loader
 1. 解決問題：全域變數衝突、模組依賴性。
 1. `<script></script>` 載入方式為非同步，所以通常都會傾聽 `document.ready` 事件來作 JS 模組載入。
@@ -9,6 +20,8 @@ Study notes for JS module tools.
 > **Reference**
 > - [NPM & Module | JS 生態系及週邊工具整理](https://ithelp.ithome.com.tw/articles/10191478)
 > - [前端模組化早期歷史( YUI + scope) | JS 生態系及週邊工具整理](https://ithelp.ithome.com.tw/articles/10191198)
+
+---
 
 ## B. ES6 Modules API
 1. ES6 模組儲存在檔案中；模組與檔案為一對一的關係。
@@ -30,6 +43,8 @@ Study notes for JS module tools.
 > - [Modules | Exploring ES6](http://exploringjs.com/es6/index.html#toc_ch_modules)
 > - [Support Table for JavaScript modules via script tag | caniuse](https://caniuse.com/#feat=es6-module)
 
+---
+
 ## C. CommonJS
 1. ES6 Modules API 標準支援度還不夠高，因此為了兼容舊版瀏覽器，模組載入需使用 CommonJS。
 1. 僅宣告模組的語法：Function `require` & Object `export`，實際支援需靠 JS runtime 或 transpiler。
@@ -42,6 +57,8 @@ Study notes for JS module tools.
 > **Reference**
 > - **[你有聽過 CommonJS 嗎？ | JS 生態系及週邊工具整理](https://ithelp.ithome.com.tw/articles/10191478)**
 > - **[AMD 與 CommonJS 的發展 | JS 生態系及週邊工具整理](https://ithelp.ithome.com.tw/articles/10191574)**
+
+---
 
 ## D. NPM & Yarn
 1. 創建 project：
@@ -65,6 +82,8 @@ Study notes for JS module tools.
 > - [NPM Install 到底做了些什麼？| JS 生態系及週邊工具整理](https://ithelp.ithome.com.tw/articles/10191783)
 > - **[package-lock.json 有什麼用？| JS 生態系及週邊工具整理](https://ithelp.ithome.com.tw/articles/10191888)**
 > - [Vue-Cli 所創建的 package.json + Webpack 設定大解析 | JS 生態系及週邊工具整理](https://ithelp.ithome.com.tw/articles/10192120)
+
+---
 
 ## E. Webpack
 1. Webpack 出現：實作瀏覽器版本 CommonJS 模組的同時，也支援 npm 上的套件。自此 JS 瀏覽器端也開始走向與 Server 端 Node.js 相同的模組管理方式：CommonJS / NPM。
