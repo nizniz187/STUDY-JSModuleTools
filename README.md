@@ -66,9 +66,17 @@ Study notes for JS module tools.
 > - **[package-lock.json 有什麼用？| JS 生態系及週邊工具整理](https://ithelp.ithome.com.tw/articles/10191888)**
 > - [Vue-Cli 所創建的 package.json + Webpack 設定大解析 | JS 生態系及週邊工具整理](https://ithelp.ithome.com.tw/articles/10192120)
 
-## E. Webpack | TK
+## E. Webpack
 1. Webpack 出現：實作瀏覽器版本 CommonJS 模組的同時，也支援 npm 上的套件。自此 JS 瀏覽器端也開始走向與 Server 端 Node.js 相同的模組管理方式：CommonJS / NPM。
-
+1. 全能的前端模組打包工具 (module bundler)，功能包括：
+    - （自動）轉譯 / 打包
+    - minify
+    - sass/scss compile
+    - include linter
+    - 支援 require / export 模組化語法
 > **Reference**
+> - [webpack](https://webpack.js.org/)
 > - [AMD 與 CommonJS 的發展 | JS 生態系及週邊工具整理](https://ithelp.ithome.com.tw/articles/10191574)
 > - **[Webpack 零設定，入門教學 | JS 生態系及週邊工具整理](https://ithelp.ithome.com.tw/articles/10192578)**
+> - [Webpack - module、bundle 和安裝 | JS 生態系及週邊工具整理](https://ithelp.ithome.com.tw/articles/10192845)
+> - **[Basic Setup | webpack Guides](https://webpack.js.org/guides/getting-started)**
