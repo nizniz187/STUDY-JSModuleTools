@@ -4,11 +4,16 @@ Study notes for JS module tools.
 ---
 
 ## TOC
-#### A. [Early Script Loader](https://github.com/nizniz187/STUDY-JS-Module-Tools#a-early-script-loader)
-#### B. [ES6 Modules API](https://github.com/nizniz187/STUDY-JS-Module-Tools#b-es6-modules-api)
-#### C. [CommonJS](https://github.com/nizniz187/STUDY-JS-Module-Tools#c-commonjs)
-#### D. [NPM & Yarn](https://github.com/nizniz187/STUDY-JS-Module-Tools#d-npm--yarn)
-#### E. [Webpack](https://github.com/nizniz187/STUDY-JS-Module-Tools#e-webpack)
+**A. [Early Script Loader](https://github.com/nizniz187/STUDY-JS-Module-Tools#a-early-script-loader)**
+    
+**B. [ES6 Modules API](https://github.com/nizniz187/STUDY-JS-Module-Tools#b-es6-modules-api)**
+    
+**C. [CommonJS](https://github.com/nizniz187/STUDY-JS-Module-Tools#c-commonjs)**
+    
+**D. [NPM & Yarn](https://github.com/nizniz187/STUDY-JS-Module-Tools#d-npm--yarn)**
+    
+**E. [Webpack](https://github.com/nizniz187/STUDY-JS-Module-Tools#e-webpack)**
+    
 
 ---
 
