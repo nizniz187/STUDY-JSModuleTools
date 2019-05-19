@@ -90,7 +90,7 @@ Study notes for JS module tools.
 
 ---
 
-## E. Webpack | TK
+## E. Webpack
 1. Webpack 出現：實作瀏覽器版本 CommonJS 模組的同時，也支援 npm 上的套件。自此 JS 瀏覽器端也開始走向與 Server 端 Node.js 相同的模組管理方式：CommonJS / NPM。
 1. 全能的前端模組打包工具 (module bundler)，功能包括：
     - （自動）轉譯 / 打包
@@ -98,10 +98,24 @@ Study notes for JS module tools.
     - sass/scss compile
     - include linter
     - 支援 require / export 模組化語法
+    
 > **Reference**
 > - [webpack](https://webpack.js.org/)
 > - [AMD 與 CommonJS 的發展 | JS 生態系及週邊工具整理](https://ithelp.ithome.com.tw/articles/10191574)
-> - **[Webpack 零設定，入門教學 | JS 生態系及週邊工具整理](https://ithelp.ithome.com.tw/articles/10192578)**
 > - [Webpack - module、bundle 和安裝 | JS 生態系及週邊工具整理](https://ithelp.ithome.com.tw/articles/10192845)
+
+### E-1. Basic
+1. Webpack browser compatibility:
+    - Supports all browsers that are ES5-compliant. (<= IE8 x)
+    - Needs `Promise` for `import()` & `require.ensure()`.
+1. Basic Compilation:
+    - `npx webpack`
+    - Entry & output settings: from `src` to `dist`.
+    - Import module js files: 
+        - Inject by `script` tag in `.html` file (X)
+        - **Use `import` syntax in js files. (O)**
+    - Configuration file: `webpack.config.js` by default.
+
+> **Reference**
+> - [Concepts | webpack](https://webpack.js.org/concepts)
 > - **[Basic Setup | webpack Guides](https://webpack.js.org/guides/getting-started)**
-> - [設定 babel-loader 來編譯 ES6, ES7, ES8, ES-Next 的程式碼！ | JS 生態系及週邊工具整理](https://ithelp.ithome.com.tw/articles/10194549)
