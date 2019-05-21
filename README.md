@@ -104,7 +104,7 @@ Study notes for JS module tools.
 > - [AMD 與 CommonJS 的發展 | JS 生態系及週邊工具整理](https://ithelp.ithome.com.tw/articles/10191574)
 > - [Webpack - module、bundle 和安裝 | JS 生態系及週邊工具整理](https://ithelp.ithome.com.tw/articles/10192845)
 
-### E-1. Basic
+### E-1. Basic Setup
 1. Webpack browser compatibility:
     - Supports all browsers that are ES5-compliant. (<= IE8 x)
     - Needs `Promise` for `import()` & `require.ensure()`.
@@ -119,3 +119,28 @@ Study notes for JS module tools.
 > **Reference**
 > - [Concepts | webpack](https://webpack.js.org/concepts)
 > - **[Basic Setup | webpack Guides](https://webpack.js.org/guides/getting-started)**
+
+### E-2. Asset Management
+1. Dynamically bundle: using loaders to dynamically load assets by importing them in JS modules.
+    - CSS: `style-loader`, `css-loader`
+    - Images / Fonts: `file-loader`
+    - Data: `csv-loader`, `xml-loader`...etc
+1. Group assets by components:
+    - Modulized assets making code more portable
+1. Store in a base directory for **global assets**
+    - Use [aliasing](https://webpack.js.org/configuration/resolve#resolvealias) for easier import.
+1. For static HTML file from `/src` to `/dist`:
+    - Use the plugin `html-webpack-plugin` with custom options or templates to auto-generate.
+1. For cleaning old output files in `dist` before compiling:
+    - Use the plugin `clean-webpack-plugin`.
+
+> **Reference**
+> - **[Asset Management | Webpack Guides](https://webpack.js.org/guides/asset-management)**
+> - [Plugins | Webpack Concepts](https://webpack.js.org/concepts#plugins)
+> - [HTML Webpack Plugin | GitHub](https://github.com/jantimon/html-webpack-plugin)
+> - [Clean Webpack Plugin | GitHub](https://github.com/johnagan/clean-webpack-plugin)
+
+### E-3. Output Management
+
+> **Reference**
+> - **[Output Management | Webpack Guides](https://webpack.js.org/guides/output-management/)**
