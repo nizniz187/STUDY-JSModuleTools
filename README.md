@@ -136,11 +136,32 @@ Study notes for JS module tools.
 
 > **Reference**
 > - **[Asset Management | Webpack Guides](https://webpack.js.org/guides/asset-management)**
+> - **[Output Management | Webpack Guides](https://webpack.js.org/guides/output-management/)**
 > - [Plugins | Webpack Concepts](https://webpack.js.org/concepts#plugins)
 > - [HTML Webpack Plugin | GitHub](https://github.com/jantimon/html-webpack-plugin)
+> - [HTML Webpack Template | GitHub](https://github.com/jaketrent/html-webpack-template)
 > - [Clean Webpack Plugin | GitHub](https://github.com/johnagan/clean-webpack-plugin)
 
-### E-3. Output Management
+### E-3. Auto-recompile
+1. 3 way for frontend code auto-recompile.
+    1. webpack watch mode: `webpack --watch`
+        - Watch resources updates and auto-recompile.
+    1. `webpack-dev-server`
+        - Watch resources updates, auto-recompile, and refresh the page.
+    1. **`webpack-dev-middleware`**
+        - Emit files processed by webpack to a server.
+        - `webpack-dev-server` uses it internally.
+        - Watch resources updates, auto-recompile, dynamically deploy to the server.
+        - **Possible to integrate with another server, making frontend code auto-recompiled in a server with backend codes.**
+1. Addtional tool: HML (Hot Module Replacement)
+    - Webpack native plugin.
+    - Dynamically update modules at runtime without the need for a page refresh.
+    - Best for heavy JS-rendered components page.
+1. **Conclusion:**
+    - **For static frontend code only, use `webpack-dev-server` for the highest efficiency.**
+    - **For running within a server with backend code, use `webpack-dev-middleware` for the best integration.**
 
 > **Reference**
-> - **[Output Management | Webpack Guides](https://webpack.js.org/guides/output-management/)**
+> - **[Development | Webpack Guides](https://webpack.js.org/guides/development)**
+> - [HotModule Replacement | Webpack Guides](https://webpack.js.org/guides/hot-module-replacement)
+> - **[React Webpack HMR 快速入門 | Medium](https://medium.com/finn-programming-life/react-webpack-hmr-example-7a4e462fb7f)**
