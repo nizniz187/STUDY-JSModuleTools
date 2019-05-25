@@ -1,2 +1,3 @@
-webpack-setup/node_modules/
-webpack-setup/dist/
+node_modules/
+dist/
+.vscode/settings.json
