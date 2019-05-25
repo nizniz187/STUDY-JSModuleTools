@@ -165,3 +165,25 @@ Study notes for JS module tools.
 > - **[Development | Webpack Guides](https://webpack.js.org/guides/development)**
 > - [HotModule Replacement | Webpack Guides](https://webpack.js.org/guides/hot-module-replacement)
 > - **[React Webpack HMR 快速入門 | Medium](https://medium.com/finn-programming-life/react-webpack-hmr-example-7a4e462fb7f)**
+
+### E-4. Code Splitting
+1. 2 approaches:
+    1. Entry Points + native `SplitChunksPlugin`
+        - Import modules in each JS manually & split them by setting entry points for bundles.
+        - Pitfalls:
+            - Could cause **duplicated modules** imported in multiple bundles. Tha's why it should be used with `SplitChunksPlugin` plugin.
+            - Unflexible. Cannot dynamically split code.
+        - `SplitChunksPlugin`: use `optimization.splitChunks` option to separate duplicated modules out to a separate chunk.
+    1. **Dynamic Imports**
+        - Use `import()` API to dynamically load the modules, then webpack will auto parse & bundle them.
+        - To better understand this topic, the understanding of the following ES6 features could be helpful:
+            - Modules
+            - `Promise`
+            - `async/await`
+            - Destructuring
+1. Bundle Analysis: made the bundle struncture visualizable.
+    - Many 3-party tools out there. `webpack-bundle-analyzer` could be the easiest.
+
+> **Reference**
+> - **[Code Splitting | Webpack Guides](https://webpack.js.org/guides/code-splitting)**
+> - [webpack-bundle-analyzer | GitHub](https://github.com/webpack-contrib/webpack-bundle-analyzer)
