@@ -183,7 +183,18 @@ Study notes for JS module tools.
             - Destructuring
 1. Bundle Analysis: made the bundle struncture visualizable.
     - Many 3-party tools out there. `webpack-bundle-analyzer` could be the easiest.
+1. Caching: use hash for output bundle name for preventing browser cache.
+    1. Use webpack substitutions `[contenthash]` for the bundle name.
+        - Generate hash depending on the content.
+        - Same content = same hash = same cache.
+    2. Use `optimizaion.runtimeChunk` option in webpack config to create a single runtime bundle.
+        - Webpack includes certain boilerplate (runtime, manifest) in the entry chunk, which may cause the hash with the same content different from each build (depends on the webpack version).
+    3. Use `optimization.splitChunks.cacheGroups` to extract 3rd-party libraries to a separate bundle.
+        - 3rd-party libraries are less likely to change.
+    4. Use native `HashedModuleIdsPlugin` to fix the `module.id` changes.
+        - `module.id` is incremented based on resolving order by default. So adding/removing modules could cause hash changes for irrelevant modules.
 
 > **Reference**
 > - **[Code Splitting | Webpack Guides](https://webpack.js.org/guides/code-splitting)**
 > - [webpack-bundle-analyzer | GitHub](https://github.com/webpack-contrib/webpack-bundle-analyzer)
+> - **[Caching | Webpack Guides](https://webpack.js.org/guides/caching)**
