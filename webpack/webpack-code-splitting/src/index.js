@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import printMe from './print.js';
+//import printMe from './print.js';
 
 function component() {
   const element = document.createElement('div');
@@ -7,10 +7,10 @@ function component() {
 
   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
 
-  btn.innerHTML = 'Clicke me and check the console!';
-  btn.onclick = printMe;
+  // btn.innerHTML = 'Clicke me and check the console!';
+  // btn.onclick = printMe;
 
-  element.appendChild(btn);
+  // element.appendChild(btn);
   return element;
 }
 

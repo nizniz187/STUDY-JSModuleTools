@@ -9,7 +9,7 @@ module.exports = {
     index: './src/index.js'
   },
   output: {
-    filename: '[name].bundle.js',
+    filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist')
   },
   plugins: [
@@ -17,6 +17,9 @@ module.exports = {
       title: 'Dynamic Imports'
     }),
     new CleanWebpackPlugin(),
-    new BundleAnalyzerPlugin()
-  ]
+    //new BundleAnalyzerPlugin()
+  ],
+  optimization: {
+    runtimeChunk: 'single'
+  }
 };
