@@ -204,7 +204,7 @@ Study notes for JS module tools.
     - **Applied for jQuery $.**
 1. Global exports: use `exports-loader` to export global variables as normal module exports.
     - Applied for global-scoped legacy code.
-1. Loading polyfills: `babel-polyfill', 'babel-preset-env'.
+1. Loading polyfills: `babel-polyfill`, `babel-preset-env`. `E-6`
 1. Use 'script-loader' to evaluate code in the global context, similar to inclusion via a `script` tag.
 
 > **Reference**
