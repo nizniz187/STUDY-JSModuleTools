@@ -198,3 +198,14 @@ Study notes for JS module tools.
 > - **[Code Splitting | Webpack Guides](https://webpack.js.org/guides/code-splitting)**
 > - [webpack-bundle-analyzer | GitHub](https://github.com/webpack-contrib/webpack-bundle-analyzer)
 > - **[Caching | Webpack Guides](https://webpack.js.org/guides/caching)**
+
+### E-5. Shimming
+1. Shimming globals: use webpack native `ProvidePlugin` to include package for certain variables.
+    - **Applied for jQuery $.**
+1. Global exports: use `exports-loader` to export global variables as normal module exports.
+    - Applied for global-scoped legacy code.
+1. Loading polyfills: `babel-polyfill', 'babel-preset-env'.
+1. Use 'script-loader' to evaluate code in the global context, similar to inclusion via a `script` tag.
+
+> **Reference**
+> - **[Shimming | Webpack Guides](https://webpack.js.org/guides/shimming)**
