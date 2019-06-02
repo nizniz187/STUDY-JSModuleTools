@@ -116,6 +116,9 @@ Study notes for JS module tools.
         - **Use `import` syntax in js files. (O)**
     - Configuration file: `webpack.config.js` by default.
 
+> **Demo**
+> - `webpack/setup`
+
 > **Reference**
 > - [Concepts | webpack](https://webpack.js.org/concepts)
 > - **[Basic Setup | webpack Guides](https://webpack.js.org/guides/getting-started)**
@@ -133,6 +136,9 @@ Study notes for JS module tools.
     - Use the plugin `html-webpack-plugin` with custom options or templates to auto-generate.
 1. For cleaning old output files in `dist` before compiling:
     - Use the plugin `clean-webpack-plugin`.
+
+> **Demo**
+> - `webpack/output-management`
 
 > **Reference**
 > - **[Asset Management | Webpack Guides](https://webpack.js.org/guides/asset-management)**
@@ -194,6 +200,10 @@ Study notes for JS module tools.
     4. Use native `HashedModuleIdsPlugin` to fix the `module.id` changes.
         - `module.id` is incremented based on resolving order by default. So adding/removing modules could cause hash changes for irrelevant modules.
 
+> **Demo**
+> - `webpack/code-splitting`
+> - `webpack/dynamic-imports`
+
 > **Reference**
 > - **[Code Splitting | Webpack Guides](https://webpack.js.org/guides/code-splitting)**
 > - [webpack-bundle-analyzer | GitHub](https://github.com/webpack-contrib/webpack-bundle-analyzer)
@@ -207,5 +217,21 @@ Study notes for JS module tools.
 1. Loading polyfills: `babel-polyfill`, `babel-preset-env`. `E-6`
 1. Use 'script-loader' to evaluate code in the global context, similar to inclusion via a `script` tag.
 
+> **Demo**
+> - `webpack/webpack-shimming`
+
 > **Reference**
 > - **[Shimming | Webpack Guides](https://webpack.js.org/guides/shimming)**
+
+### E-6. Working with Babel
+1. Required package: `babel-loader`, `@babel/core`, `@babel/preset-env`.
+1. Set `corejs: '3.0'` as an `useBuiltIns` option, or including `@babel/polyfill` is necessary for the default `core-js` version (2.x).
+
+> **Demo**
+> - `webpack/webpack-babel-loader`
+
+> **Reference**
+> - [babel-loader | webpack](https://webpack.js.org/loaders/babel-loader)
+> - [Using @babel/polyfill in Webpack | Babel](https://babeljs.io/docs/en/babel-polyfill#usage-in-node-browserify-webpack)
+> - **[Working with Babel 7 and Webpack](https://www.thebasement.be/working-with-babel-7-and-webpack/)**
+
